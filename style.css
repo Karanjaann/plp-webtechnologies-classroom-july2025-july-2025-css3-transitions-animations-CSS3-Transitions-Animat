@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* -------------------
+   Part 1: Animations
+------------------- */
+
+/* Transition Example: Button Hover */
+.animated-btn {
+  padding: 12px 20px;
+  background: teal;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.animated-btn:hover {
+  background: darkcyan;
+  transform: scale(1.1);
+}
+
+/* Keyframe Animation Example: Pulse Box */
+.pulse-box {
+  width: 80px;
+  height: 80px;
+  background: coral;
+  margin-top: 20px;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* -------------------
+   Part 3: JS Triggered Animation
+------------------- */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: purple;
+  margin-top: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Animation class to be added/removed with JS */
+.move {
+  animation: moveRight 2s forwards;
+}
+
+@keyframes moveRight {
+  0% { left: 0; }
+  100% { left: 200px; }
+}
